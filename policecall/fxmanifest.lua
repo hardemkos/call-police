@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Tvoje jméno nebo název serveru'
+author 'hardemko'
 description 'Skript pro zavolání pomoci na policejní stanici pomocí ox_target a cd_dispatch'
 version '1.0.0'
 
