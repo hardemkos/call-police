@@ -2,18 +2,18 @@ fx_version 'cerulean'
 game 'gta5'
 
 author 'hardemko'
-description 'Skript pro zavolání pomoci na policejní stanici pomocí ox_target a cd_dispatch'
+description 'call police'
 version '1.0.0'
 
 client_scripts {
-    'client.lua'  -- Klientská část skriptu
+    'client.lua' 
 }
 
 server_scripts {
-    'server.lua'  -- Serverová část skriptu
+    'server.lua'  
 }
 
 dependencies {
-    'ox_target',    -- Závislost na ox_target pro interakce
-    'cd_dispatch'   -- Závislost na cd_dispatch pro notifikace
+    'ox_target',    
+    'cd_dispatch'   
 }
