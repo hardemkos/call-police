@@ -2,7 +2,7 @@ RegisterNetEvent('police:callForHelp', function(playerCoords, playerSex, playerS
     local src = source
     local player = GetPlayerName(src)
 
-    -- Urèení, zda je hrac muz nebo zena a uprava textu
+    
     local callMessage
     if playerSex == "male" then
         callMessage = "zavolal policii na recepci."
@@ -10,22 +10,22 @@ RegisterNetEvent('police:callForHelp', function(playerCoords, playerSex, playerS
         callMessage = "zavolala policii na recepci."
     end
 
-    -- Odeslání notifikace pro všechny online policisty
+    
     TriggerClientEvent('cd_dispatch:AddNotification', -1, {
-        job_table = {'police'},  -- Urèujeme, že notifikace pùjde pouze policistùm
-        coords = playerCoords,  -- Koordináty hráèe
-        title = 'Volani na pomoc',  -- Titulek bez "10-15"
-        message = 'Hrac ('..playerSex..') '..callMessage..' Misto: '..playerStreet,  -- Dynamická zpráva podle pohlaví
+        job_table = {'police'},  
+        coords = playerCoords,  
+        title = 'Volani na pomoc',  
+        message = 'Hrac ('..playerSex..') '..callMessage..' Misto: '..playerStreet,  
         flash = 0,
-        unique_id = playerUniqueId,  -- Unikátní ID hráèe
-        sound = 1,  -- Zvuk
+        unique_id = playerUniqueId,  
+        sound = 1,  
         blip = {
-            sprite = 431,  -- Ikona blipu (mùžeš upravit dle potøeby)
-            scale = 1.2,  -- Velikost blipu
-            colour = 3,  -- Barva blipu
+            sprite = 431,  
+            scale = 1.2,  
+            colour = 3,  
             flashes = false,
-            text = 'Zavolal policii na recepci',  -- Text blipu
-            time = 5,  -- Doba trvání blipu
+            text = 'Zavolal policii na recepci',  
+            time = 5,  
             radius = 0,
         }
     })
